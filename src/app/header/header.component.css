@@ -1,0 +1,6 @@
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover{
+  color: red !important;
+  background-color: white !important;
+}
+
+

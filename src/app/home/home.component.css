@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+  background: url('http://getwallpapers.com/wallpaper/full/2/a/2/1100544-pokeball-background-1920x1200-for-1080p.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1568px){
+  html{
+    background: url('http://getwallpapers.com/wallpaper/full/8/9/e/1100549-top-pokeball-background-1920x1080-mac.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%
+  }
+}
