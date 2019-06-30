@@ -1,6 +1,10 @@
 .responsive {
-  width: 100%;
-  height: auto;
+
+    width: auto;
+    max-width: 350px;
+    height: auto;
+    max-height: 200px;
+
 }
  .card {
    position: relative,
