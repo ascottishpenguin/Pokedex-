@@ -7,7 +7,6 @@ export class Pokemon {
     this.id = id;
     this.name = name;
     this.imagePath = 'https://the-pokedex.s3.eu-west-2.amazonaws.com/' + titleCaseWord(this.name) + '.gif';
-    console.log(this.imagePath);
 
     // this.imagePath = 'https://pkmneclipse.net/images/letsgo/kanto-normal/Charizard_MegaY.gif;
   }}

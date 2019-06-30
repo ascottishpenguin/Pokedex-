@@ -2,15 +2,13 @@
   <h1 class="display-4">Pokemon</h1>
 </div>
 <div class="container">
-
-
-  </div>
   <div class = "row">
       <a *ngFor = "let pokemon of pokemons"
-      [routerLink]="['/pokemondetails/', pokemon.id]"><div class="card align-items-center" style="width: 18rem;">
+      [routerLink]="['/pokemondetails/', pokemon.id]"><div class="card align-items-center col-md-8" style="width: 18rem;">
     <img class="card-img-top responsive" src="{{pokemon.imagePath}}" alt="Card image cap">
     <div class="card-body align-items-left">
       <h5 class="card-title">{{pokemon.name | titlecase}}</h5>
     </div>
     </div></a>
   </div>
+</div>

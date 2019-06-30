@@ -1,1 +1,6 @@
-<img class="card-img-top" src="{{pokemon.imagePath}}" alt="Card image cap">
+<div class="container">
+    <h1 class="card-title">{{pokemon.name | titlecase}}</h1>
+<div class="card align-items-center col-md-8" style="width: 18rem;">
+    <img class="card-img-top responsive" src="{{pokemon.imagePath}}" alt="Card image cap">
+    <p class="card-title">{{pokemonDetail.description}}</p>
+  </div>
