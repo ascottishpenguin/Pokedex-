@@ -1,12 +1,18 @@
 .responsive {
 
     width: auto;
-    max-width: 350px;
-    height: auto;
+    max-width: 200px;
+    min-height:200px;
     max-height: 200px;
 
 }
  .card {
-   position: relative,
 
+   padding: 10px;
+   margin: 10px 10px 10px 10px;
+
+ }
+
+ a {
+   text-decoration: none;
  }

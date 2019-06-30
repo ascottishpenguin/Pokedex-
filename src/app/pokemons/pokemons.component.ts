@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Pokemon} from '../pokemons/pokemons.model';
 import {PokemonService} from '../pokemons/pokemon.service';
-
+import { PageEvent} from '@angular/material';
 
 @Component({
   selector: 'app-pokemons',
@@ -13,6 +13,10 @@ import {PokemonService} from '../pokemons/pokemon.service';
 export class PokemonsComponent {
 // tslint:disable-next-line: max-line-length
   pokemons: Pokemon[] = [];
+
+  length = 100;
+  pageSize = 10;
+  pageSizeOptions = [1, 2, 5, 10];
 
   constructor(private pokemonService: PokemonService) {
   this.initPokemon();
@@ -30,7 +34,7 @@ export class PokemonsComponent {
           )
         );
 
-        console.log(this.pokemons)
+        console.log(this.pokemons);
       });
     });
   }
@@ -39,3 +43,5 @@ export class PokemonsComponent {
     alert(JSON.stringify(pokemon));
   }
 }
+
+

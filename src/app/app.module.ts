@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import {PokemonsComponent} from './pokemons/pokemons.component';
 import {PokemonDetailsComponent} from './pokemons/pokemon-details/pokemon-details.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 
 @NgModule({
@@ -16,12 +18,13 @@ import {PokemonDetailsComponent} from './pokemons/pokemon-details/pokemon-detail
     HeaderComponent,
     HomeComponent,
     PokemonsComponent,
-    PokemonDetailsComponent
+    PokemonDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
