@@ -22,14 +22,13 @@ export class PokemonsComponent {
   initPokemon() {
     this.pokemonService.fetchPokemons(0, 151).subscribe(pokemonsObservable => {
       // Nesting this subscribe here was the only way I could make it work.
+
       pokemonsObservable.subscribe(pokemonsData => {
         this.pokemons = pokemonsData.map(
           (pokemonData: any) => new Pokemon(
             pokemonData.id,
             pokemonData.name,
             pokemonData.sprites.front_default,
-            pokemonData.types[0].type.name,
-            pokemonData.types[1].type.name
           )
         );
       });
