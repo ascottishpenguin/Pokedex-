@@ -2,7 +2,7 @@ export class Pokemon2 {
   public name: string;
   public imagePath: string;
   public id: number;
-  public type1: string;
+  public type1: any;
   public type2: any;
 
 
@@ -12,7 +12,6 @@ export class Pokemon2 {
     this.imagePath = 'https://the-pokedex.s3.eu-west-2.amazonaws.com/' + titleCaseWord(this.name) + '.gif';
     this.type1 = type1;
     this.type2 = type2;
-    console.log(this.type2);
 
   }}
 
