@@ -30,7 +30,10 @@ export class PokemonDetailsComponent implements OnInit {
             pokemonData.id,
             pokemonData.name,
             pokemonData.sprites.front_default,
+            pokemonData.types[0].type.name,
+            pokemonData.types[1].type.name
         );
+        console.log(pokemonData.types[1].type.name);
       });
     });
 

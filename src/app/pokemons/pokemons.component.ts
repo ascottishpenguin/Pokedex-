@@ -27,7 +27,9 @@ export class PokemonsComponent {
           (pokemonData: any) => new Pokemon(
             pokemonData.id,
             pokemonData.name,
-            pokemonData.sprites.front_default
+            pokemonData.sprites.front_default,
+            pokemonData.types[0].type.name,
+            pokemonData.types[1].type.name
           )
         );
       });
