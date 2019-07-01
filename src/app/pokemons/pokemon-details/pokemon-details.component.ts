@@ -13,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PokemonDetailsComponent implements OnInit {
 
 
-  pokemon: Pokemon;
+  pokemon: Pokemon2;
   pokemonDetail: PokemonDetail;
 
   constructor(private pokemonService: PokemonService, private route: ActivatedRoute) { }
