@@ -29,11 +29,11 @@ export class PokemonDetailsComponent implements OnInit {
         const pokemonData: any = pokemonsData[0];
 
         const pokeType2 = () =>  {
-          let pokeType2 = '';
+          let pokeType2data = '';
           if (pokemonData.types.length > 1) {
-          pokeType2 = pokemonData.types[1].type.name;
-          } else { pokeType2 = ''; }
-          return pokeType2;
+          pokeType2data = pokemonData.types[1].type.name;
+          } else { pokeType2data = ''; }
+          return pokeType2data;
           };
 
 
