@@ -2,8 +2,8 @@ export class Pokemon2 {
   public name: string;
   public imagePath: string;
   public id: number;
-  public type1: any;
-  public type2: any;
+  public type1: string;
+  public type2: string;
 
 
   constructor(id: number, name: string, imagePath: string, type1: string, type2: string) {

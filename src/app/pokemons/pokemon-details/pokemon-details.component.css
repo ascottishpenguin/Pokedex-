@@ -100,3 +100,20 @@
 	background-color: #7038F8;
 	border: 1px solid #4924A1;
 }
+
+.pokemon-stats {
+  width:100%;
+}
+.pokemon-stats-info {
+  width:100%;
+  font-size:1rem;;
+
+}
+.pokemon-stats-bar {
+   height:auto;
+   background:#28a745;
+   font-size:1rem;;
+   text-align:right;
+   margin-bottom:10px;
+  }
+

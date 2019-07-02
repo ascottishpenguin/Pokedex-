@@ -34,11 +34,6 @@ export class PokemonsComponent {
       });
     });
   }
-
-
-  showPokemonDetails(pokemon: Pokemon) {
-    alert(JSON.stringify(pokemon));
-  }
 }
 
 

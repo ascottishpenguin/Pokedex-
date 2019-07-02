@@ -12,55 +12,82 @@
       <h2>Description</h2>
 
       <p>{{ pokemonDetail.description }}</p>
-      <div class = container>
-      <span
-        [ngClass]="{
-          fire: pokemon.type1 === 'fire',
-          water: pokemon.type1 === 'water',
-          electric: pokemon.type1 === 'electric',
-          grass: pokemon.type1 === 'grass',
-          ice: pokemon.type1 === 'ice',
-          ground: pokemon.type1 === 'ground',
-          flying: pokemon.type1 === 'flying',
-          ghost: pokemon.type1 === 'ghost',
-          rock: pokemon.type1 === 'rock',
-          fighting: pokemon.type1 === 'fighting',
-          poison: pokemon.type1 === 'poison',
-          psychic: pokemon.type1 === 'psychic',
-          bug: pokemon.type1 === 'bug',
-          dark: pokemon.type1 === 'dark',
-          steel: pokemon.type1 === 'steel',
-          dragon: pokemon.type1 === 'dragon'
-        }"
-        class="type left"
-      >
-        {{ pokemon.type1 }}</span
-      >
-    </div>
+      <h4>Type</h4>
+      <div class="container">
+        <span
+          [ngClass]="{
+            fire: pokemon.type1 === 'fire',
+            water: pokemon.type1 === 'water',
+            electric: pokemon.type1 === 'electric',
+            grass: pokemon.type1 === 'grass',
+            ice: pokemon.type1 === 'ice',
+            ground: pokemon.type1 === 'ground',
+            flying: pokemon.type1 === 'flying',
+            ghost: pokemon.type1 === 'ghost',
+            rock: pokemon.type1 === 'rock',
+            fighting: pokemon.type1 === 'fighting',
+            poison: pokemon.type1 === 'poison',
+            psychic: pokemon.type1 === 'psychic',
+            bug: pokemon.type1 === 'bug',
+            dark: pokemon.type1 === 'dark',
+            steel: pokemon.type1 === 'steel',
+            dragon: pokemon.type1 === 'dragon'
+          }"
+          class="type left"
+        >
+          {{ pokemon.type1 }}</span
+        >
 
-    <span
-      [ngClass]="{
-        fire: pokemon.type2 === 'fire',
-        water: pokemon.type2 === 'water',
-        electric: pokemon.type2 === 'electric',
-        grass: pokemon.type2 === 'grass',
-        ice: pokemon.type2 === 'ice',
-        ground: pokemon.type2 === 'ground',
-        flying: pokemon.type2 === 'flying',
-        ghost: pokemon.type2 === 'ghost',
-        rock: pokemon.type2 === 'rock',
-        fighting: pokemon.type2 === 'fighting',
-        poison: pokemon.type2 === 'poison',
-        psychic: pokemon.type2 === 'psychic',
-        bug: pokemon.type2 === 'bug',
-        dark: pokemon.type2 === 'dark',
-        steel: pokemon.type2 === 'steel',
-        dragon: pokemon.type2 === 'dragon'
-      }"
-      class="type left"
-    >
-      {{ pokemon.type2 }}</span
-    >
+        <span
+          [ngClass]="{
+            fire: pokemon.type2 === 'fire',
+            water: pokemon.type2 === 'water',
+            electric: pokemon.type2 === 'electric',
+            grass: pokemon.type2 === 'grass',
+            ice: pokemon.type2 === 'ice',
+            ground: pokemon.type2 === 'ground',
+            flying: pokemon.type2 === 'flying',
+            ghost: pokemon.type2 === 'ghost',
+            rock: pokemon.type2 === 'rock',
+            fighting: pokemon.type2 === 'fighting',
+            poison: pokemon.type2 === 'poison',
+            psychic: pokemon.type2 === 'psychic',
+            bug: pokemon.type2 === 'bug',
+            dark: pokemon.type2 === 'dark',
+            steel: pokemon.type2 === 'steel',
+            dragon: pokemon.type2 === 'dragon'
+          }"
+          class="type left"
+        >
+          {{ pokemon.type2 }}</span
+        >
+      </div>
+    </div>
   </div>
+  <h4>Stats</h4>
+  <div class="row" id ="stats">
+    <div class="col-md-4">
+      <div class="pokemon-stats">
+        <div class="pokemon-stats-info">Total:</div>
+        <div
+          class="pokemon-stats-bar"
+          style="width:141px; background-color:#F00; color:#FFF;"
+        >
+          405
+        </div>
+        <div class="pokemon-stats-info">Health:</div>
+        <div class="pokemon-stats-bar" style="width:60px;">60</div>
+        <div class="pokemon-stats-info">Attack:</div>
+        <div class="pokemon-stats-bar" style="width:62px;">62</div>
+        <div class="pokemon-stats-info">Defence:</div>
+        <div class="pokemon-stats-bar" style="width:63px;">63</div>
+        <div class="pokemon-stats-info">Special Attack:</div>
+        <div class="pokemon-stats-bar" style="width:80px;">80</div>
+        <div class="pokemon-stats-info">Special Defence:</div>
+        <div class="pokemon-stats-bar" style="width:80px;">80</div>
+        <div class="pokemon-stats-info">Speed:</div>
+        <div class="pokemon-stats-bar" style="width:60px;">60</div>
+      </div>
+    </div>
   </div>
 </div>
