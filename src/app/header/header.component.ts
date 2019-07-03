@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { PokemonService} from 'src/app/pokemon.service';
+
+
+@Injectable({
+  providedIn: 'root',
+})
+
 
 @Component({
   selector: 'app-header',
@@ -7,7 +14,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pokemonService: PokemonService) {
+  }
 
   ngOnInit() {
   }

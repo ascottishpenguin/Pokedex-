@@ -2,6 +2,31 @@
   <h1 class="display-4">Pokemon</h1>
 </div>
 <div class="container">
+    <div class ="row">
+    <div class="dropdown filter">
+        <button class="btn btn-primary dropdown-toggle bg-success filter" type="button" data-toggle="dropdown">Filter By...
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a (click) = "setTypeFilter('fire')">Fire</a></li>
+          <li><a (click) = "setTypeFilter('grass')">Grass</a></li>
+          <li><a (click) = "setTypeFilter('water')">Water</a></li>
+          <li><a (click) = "setTypeFilter('bug')">Bug</a></li>
+          <li><a (click) = "setTypeFilter('electric')">Electric</a></li>
+          <li><a (click) = "setTypeFilter('poison')">Posion</a></li>
+          <li><a (click) = "setTypeFilter('ghost')">Ghost</a></li>
+          <li><a (click) = "setTypeFilter('ice')">Ice</a></li>
+          <li><a (click) = "setTypeFilter('psychic')">Psychic</a></li>
+          <li><a (click) = "setTypeFilter('fighting')">Fighting</a></li>
+          <li><a (click) = "setTypeFilter('flying')">Flying</a></li>
+          <li><a (click) = "setTypeFilter('rock')">Rock</a></li>
+          <li><a (click) = "setTypeFilter('ground')">Ground</a></li>
+          <li><a (click) = "setTypeFilter('normal')">Normal</a></li>
+          <li><a (click) = "setTypeFilter('dragon')">Dragon</a></li>
+        </ul>
+      </div>
+          <input #nameserach class="form-control mr-sm-2" type="search" placeholder="Search by Pokemon" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0 bg-success text-white" (click) = "setNameFilter(nameserach.value)">Search</button>
+        </div>
   <div class = "row">
       <a *ngFor = "let pokemon of pokemons"
       [routerLink]="['/pokemondetails/', pokemon.id]"><div class="card align-items-center col-md-8" style="width: 18rem;">

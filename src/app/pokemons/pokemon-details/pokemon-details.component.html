@@ -68,25 +68,18 @@
   <div class="row" id ="stats">
     <div class="col-md-4">
       <div class="pokemon-stats">
-        <div class="pokemon-stats-info">Total:</div>
-        <div
-          class="pokemon-stats-bar"
-          style="width:141px; background-color:#F00; color:#FFF;"
-        >
-          405
-        </div>
         <div class="pokemon-stats-info">Health:</div>
-        <div class="pokemon-stats-bar" style="width:60px;">60</div>
+        <div class="pokemon-stats-bar" [style.width.%] = pokemon.stats.hp >{{pokemon.stats.hp}}</div>
         <div class="pokemon-stats-info">Attack:</div>
-        <div class="pokemon-stats-bar" style="width:62px;">62</div>
+        <div class="pokemon-stats-bar"  [style.width.%] = pokemon.stats.attack >{{pokemon.stats.attack}}</div>
         <div class="pokemon-stats-info">Defence:</div>
-        <div class="pokemon-stats-bar" style="width:63px;">63</div>
+        <div class="pokemon-stats-bar"  [style.width.%] = pokemon.stats.defense >{{pokemon.stats.defense}}</div>
         <div class="pokemon-stats-info">Special Attack:</div>
-        <div class="pokemon-stats-bar" style="width:80px;">80</div>
+        <div class="pokemon-stats-bar"  [style.width.%] = pokemon.stats.speciala >{{pokemon.stats.speciala}}</div>
         <div class="pokemon-stats-info">Special Defence:</div>
-        <div class="pokemon-stats-bar" style="width:80px;">80</div>
+        <div class="pokemon-stats-bar" [style.width.%] = pokemon.stats.speciald >{{pokemon.stats.speciald}}</div>
         <div class="pokemon-stats-info">Speed:</div>
-        <div class="pokemon-stats-bar" style="width:60px;">60</div>
+        <div class="pokemon-stats-bar"  [style.width.%] = pokemon.stats.speed >{{pokemon.stats.speed}}</div>
       </div>
     </div>
   </div>

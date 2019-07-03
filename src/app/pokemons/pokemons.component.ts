@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Pokemon} from '../pokemons/pokemons.model';
-import {PokemonService} from '../pokemons/pokemon.service';
+import {PokemonService} from 'src/app/pokemon.service';
 
 
 @Component({
@@ -11,28 +11,22 @@ import {PokemonService} from '../pokemons/pokemon.service';
 
 })
 export class PokemonsComponent {
-// tslint:disable-next-line: max-line-length
+
   pokemons: Pokemon[] = [];
 
 
   constructor(private pokemonService: PokemonService) {
-  this.initPokemon();
+  this.pokemonService.initPokemon();
+  this.pokemonService.pokemons.subscribe(
+    data => this.pokemons = data);
   }
 
-  initPokemon() {
-    this.pokemonService.fetchPokemons(0, 151).subscribe(pokemonsObservable => {
-      // Nesting this subscribe here was the only way I could make it work.
+  setTypeFilter(type){
+    this.pokemonService.setTypeFilter(type);
+  }
 
-      pokemonsObservable.subscribe(pokemonsData => {
-        this.pokemons = pokemonsData.map(
-          (pokemonData: any) => new Pokemon(
-            pokemonData.id,
-            pokemonData.name,
-            pokemonData.sprites.front_default,
-          )
-        );
-      });
-    });
+  setNameFilter(name) {
+    this.pokemonService.setNameFilter(name);
   }
 }
 

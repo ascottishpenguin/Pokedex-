@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {PokemonDetail} from 'src/app/pokemons/pokemon-details/pokemon-details.model';
-import {Pokemon2} from 'src/app/pokemons/pokemon-details/pokemon-details2.model';
 import {Pokemon} from 'src/app/pokemons/pokemons.model';
-import {PokemonService} from 'src/app/pokemons/pokemon.service';
+import {PokemonService} from 'src/app/pokemon.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -13,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PokemonDetailsComponent implements OnInit {
 
 
-  pokemon: Pokemon2;
+  pokemon: Pokemon;
   pokemonDetail: PokemonDetail;
 
   constructor(private pokemonService: PokemonService, private route: ActivatedRoute) { }
@@ -28,23 +27,15 @@ export class PokemonDetailsComponent implements OnInit {
       pokemonsObservable.subscribe(pokemonsData => {
         const pokemonData: any = pokemonsData[0];
 
-        const pokeType2 = () =>  {
-          let pokeType2data = '';
-          if (pokemonData.types.length > 1) {
-          pokeType2data = pokemonData.types[1].type.name;
-          } else { pokeType2data = ''; }
-          return pokeType2data;
-          };
-
-
-        this.pokemon = new Pokemon2(
+        this.pokemon = new Pokemon(
             pokemonData.id,
             pokemonData.name,
             pokemonData.sprites.front_default,
             pokemonData.types[0].type.name,
-            pokeType2()
+            pokemonData.types.length > 1 ? pokemonData.types[1].type.name : undefined,
         );
-
+        console.log(this.pokemon);
+        this.pokemon.setStats(pokemonData.stats);
       });
     });
 
